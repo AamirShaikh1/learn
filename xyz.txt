@@ -1,0 +1,25 @@
+
+For Amir
+
+Amir - 2 month internship
+	how web development work
+		client
+		server
+		architect
+		design
+		frontend
+		backend
+		frontend-backend integration
+		api
+	html
+	css
+	js
+	json
+	php basic
+		auth
+		cart
+		chatbot (optional)
+	database
+		mysql
+	tool
+		git

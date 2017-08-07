@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>js tutorial</title>
+</head>
+<body>
+	<h1 id="demo">Hello JS!!!</h1>
+
+
+	<script>
+		var a = 500;
+		var demo_block = document.getElementById('demo')
+		console.log('a = ' + a)
+		all_values = ''
+
+		for (var i = 0; i < 30; i++) {
+			if (i == 10) {
+				console.log('its 10')
+			} else if (i == 20) {
+				console.log('its 20')
+				// single line comment
+				/*
+					its not run by js
+					it is multiline comment
+				*/ 
+			} else {
+				console.log(i)
+			}
+			all_values = all_values + 'its me ' + i + '<br>'
+		}
+		demo_block.innerHTML = all_values
+
+	</script>
+
+	<script src="my.js"></script>
+</body>
+</html>
