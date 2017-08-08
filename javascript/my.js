@@ -10,9 +10,13 @@ function myfunction()
 
 	var date = ( (now.getDate() < 10) ? "0" : "" ) + now.getDate();
 	console.log(date);
-	return;
+	
 
-	var time = setInterval( (now.getTime(), 1000) ? "0" : "" )+ now.getTime();
+	var time =( (now.getTime() < 10) ? "0" : "" )+ now.getTime();
+	console.log(time);
+
+	console.log(now.getHours(), now.getMinutes(), now.getSeconds());
+	return;
 
 	function fourdigits(number)	{
 		return (number < 1000) ? number + 1900 : number;
@@ -23,6 +27,7 @@ function myfunction()
 
 	document.getElementById("demo").innerHTML = today;
 	}
+
 
 
 
