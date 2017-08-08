@@ -1,30 +1,23 @@
 	
     function myfunction()
     {
-    var day;
-switch (new Date().getDay()) {
-    case 0:
-        day = "Sunday";
-        break;
-    case 1:
-        day = "Monday";
-        break;
-    case 2:
-        day = "Tuesday";
-        break;
-    case 3:
-        day = "Wednesday";
-        break;
-    case 4:
-        day = "Thursday";
-        break;
-    case 5:
-        day = "Friday";
-        break;
-    case  6:
-        day = "Saturday";
-}
-	document.getElementById("demo").innerHTML = day;
+ var now = new Date();
+
+var days = new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+
+var months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+
+var date = ((now.getDate()<10) ? "0" : "")+ now.getDate();
+
+function fourdigits(number)	{
+	return (number < 1000) ? number + 1900 : number;
+								}
+today =  days[now.getDay()] + ", " +
+         months[now.getMonth()] + " " +
+         date + ", " +
+         (fourdigits(now.getYear())) ;
+
+	document.getElementById("demo").innerHTML = today;
 	}
 	
 
