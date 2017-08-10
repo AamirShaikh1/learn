@@ -32,7 +32,13 @@
   prepand=' AM';
   } 
   } 
-document.getElementById('demo').innerHTML =("Today is : " + daylist[day] + ".") +'<br>' + ("Current Time : "+hour + prepand + " : " + minute + " : " + second);
+document.getElementById('demo').innerHTML =("Today is : " + daylist[day] + ".") +'<br>' + 
+										   ("Current Time : "+hour + prepand + " : " + minute + " : " + second);
 
+getEl('demo').innerHTML = 'lol';
+
+function getEl(id) {
+	return document.getElementById(id);
+}
 
 
