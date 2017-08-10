@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MY FORM</title>
+
+    <style>
+        
+        
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box
+        }
+        
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+         
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: green;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        </style>
+</head>
+    
+<body>
+    <div class="header">
+    	<h1>Colorlib Contact Form</h1>
+
+    	<h4>Contact us for Custom quote</h4>
+    </div>
+    <form>
+
+	<label for="p">Your Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="p">Your Email Address</label>
+    <input type="text" id="email" name="Email" placeholder="Email Id..">
+
+    <label for="p">Your phone Number (optional)</label>
+    <input type="text" id="phone" name="Number" placeholder="contact number..">
+
+    <label for="p">Your Web site (optional)</label>
+    <input type="text" id="web" name="Site" placeholder="web site..">
+
+
+	<label for="textarea">message</label>
+    <!-- <input type="text" id="msg" name="Site" placeholder="Type your message here.."> -->
+    <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Type your message here.."></textarea>
+    
+
+    <input type="submit" value="Submit">
+		
+		
+	</form>
+</body>
+</html>

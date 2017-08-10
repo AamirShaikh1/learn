@@ -1,33 +1,38 @@
-	
-function myfunction()
-{
-	var now = new Date();
-
-	var days = new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
-	// var days = ['Sunday', 'Monday'];
-	var months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
-
-
-	var date = ( (now.getDate() < 10) ? "0" : "" ) + now.getDate();
-	console.log(date);
-	
-
-	var time =( (now.getTime() < 10) ? "0" : "" )+ now.getTime();
-	console.log(time);
-
-	console.log(now.getHours(), now.getMinutes(), now.getSeconds());
-	return;
-
-	function fourdigits(number)	{
-		return (number < 1000) ? number + 1900 : number;
-	}
-
-	today =  days[now.getDay()] + ", " + months[now.getMonth()] + " " + date + ", " + (fourdigits(now.getYear())) ;
-	// time + "," +
-
-	document.getElementById("demo").innerHTML = today;
-	}
-
+  var today = new Date();
+  var day = today.getDay();
+  var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  var hour = today.getHours();
+  var minute = today.getMinutes();
+  var second = today.getSeconds();
+  var prepand = (hour >= 12)? " PM ":" AM ";
+  hour = (hour >= 12)? hour - 12: hour;
+  if (hour===0 && prepand===' PM ') 
+  { 
+  if (minute===0 && second===0)
+  { 
+  hour=12;
+  prepand=' Noon';
+  } 
+  else
+  { 
+  hour=12;
+  prepand=' PM';
+  } 
+  } 
+  if (hour===0 && prepand===' AM ') 
+  { 
+  if (minute===0 && second===0)
+  { 
+  hour=12;
+  prepand=' Midnight';
+  } 
+  else
+  { 
+  hour=12;
+  prepand=' AM';
+  } 
+  } 
+document.getElementById('demo').innerHTML =("Today is : " + daylist[day] + ".") +'<br>' + ("Current Time : "+hour + prepand + " : " + minute + " : " + second);
 
 
 
